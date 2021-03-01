@@ -240,7 +240,7 @@ public class CordovaCall extends CordovaPlugin {
 
             //----------------------------------------------------------------------------------
             if (conn == null) {
-                this.callbackContext.error("[VOIPCALLKITPLUGIN][CordovaCall][execute:][action:'endCall'] getConnectionByCallId(callId) NOT FOUND (endCall can be sent multiple times the 1st one gets hangup response IGNORE the rest) ");
+                this.callbackContext.success("[VOIPCALLKITPLUGIN][CordovaCall][execute:][action:'endCall'] getConnectionByCallId(callId) NOT FOUND (endCall can be sent multiple times the 1st one gets hangup response IGNORE the rest) ");
             } else {
                 conn.onDisconnect();
                 this.callbackContext.success("[VOIPCALLKITPLUGIN][CordovaCall][execute:][action:'endCall'] Call ended successfully");
